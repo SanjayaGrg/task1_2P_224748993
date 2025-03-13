@@ -44,7 +44,7 @@ public class SeleniumOperations {
 	
 
 	public static void open_chrome_maximize_close() {
-		// Step 1: Locate chrome driver folder in the local drive.
+ 		// Step 1: Locate chrome driver folder in the local drive.
 		System.setProperty("webdriver.chrome.driver", "C:/Users/NITRO 5/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe");
 		
 		// Step 2: Use above chrome driver to open up a chromium browser.
@@ -109,6 +109,7 @@ public class SeleniumOperations {
 		/*
 		 * Load google page.
 		 */
+		System.out.println("Opening google.com page..");
 		driver.get("https://www.google.com");
 		
 		/*
@@ -116,12 +117,14 @@ public class SeleniumOperations {
 		 * Hint: Explore Selenium window functions to select one which allows to pass window size in WxH.
 		 */
 		// write code
+		System.out.println("Resizing the window size to 640x480..");
 		driver.manage().window().setSize(new Dimension(640, 480));
 		sleep(2);
 		/*
 		 * Double window size manually to 1280x960 and wait 2 second.		 
 		 */
 		// write code
+		System.out.println("Doubling window size to 1280x960..");
 		driver.manage().window().setSize(new Dimension(1280, 960));
 		sleep(2);
 		
